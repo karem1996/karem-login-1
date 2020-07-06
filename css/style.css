@@ -1,0 +1,129 @@
+.container-fluid {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+.container-fluid .circle {
+  position: absolute;
+  top: -29%;
+  left: -16%;
+  width: 150vh;
+  height: 150vh;
+  background-color: #f5f7fb;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: inset -3px 20px 11px #e4d3d3;
+}
+.container-fluid form {
+  width: 37%;
+  margin: auto;
+}
+.container-fluid form .pierant {
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: relative;
+  margin: 12% auto 5%;
+  box-shadow: 0px 0px 11px #e4d3d3;
+}
+.container-fluid form .pierant .child {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  border: 6px solid #fc78c2;
+  transform: translate(-50%, -50%);
+}
+.container-fluid form h2 {
+  color: #5b6784;
+  padding-bottom: 6px;
+  font-size: 2em;
+}
+.container-fluid form p {
+  color: #8e93a9;
+  margin: auto;
+  margin-bottom: 5%;
+  width: 80%;
+}
+.container-fluid form .form-group {
+  position: relative;
+}
+.container-fluid form .form-group input {
+  display: block;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  border-bottom: 3px inset #b9b9b9;
+  transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  margin-bottom: 8%;
+  background: none;
+}
+.container-fluid form .form-group .form-control:focus {
+  border-color: #fc78c3;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.075) inset, 0px 0px 0px rgba(255, 0, 255, 0.5);
+}
+.container-fluid form .form-group .invalid-feedback {
+  margin-top: -30px;
+}
+.container-fluid form .form-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #5b6784;
+}
+.container-fluid form .form-group input:focus ~ label,
+.container-fluid form .form-group input:valid ~ label {
+  top: -20px;
+  color: #fc78c2;
+}
+.container-fluid form .form-group span.dotit {
+  width: 5px;
+  height: 5px;
+  background: #818899;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  border-radius: 50%;
+}
+.container-fluid form button {
+  padding: 12px 40px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 11px #d6c8c8;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #8e93a9;
+  border: 1px solid #fff;
+  background-color: #fff;
+  outline: none;
+}
+.container-fluid form button i {
+  margin-left: 8px;
+  color: #fc78c2;
+}
+.container-fluid form button:hover {
+  color: #fc78c2;
+  border: 1px solid #fc78c2;
+}
+.container-fluid form p.forgot {
+  padding-top: 8%;
+  color: #8e93a9;
+  font-size: small;
+}
+.container-fluid form p.forgot span {
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+}

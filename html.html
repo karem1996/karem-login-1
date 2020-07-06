@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Design 1</title>
+    <script src="https://kit.fontawesome.com/4d54c01a90.js" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="circle"></div>
+        <form [formGroup]="registerForm">
+
+            <div class="pierant">
+                <div class="child"></div>
+            </div>
+
+
+            <h2 class="text-center">SIGN IN</h2>
+            <p class="text-center">Hello there! Sign in and start managing your Bank items</p>
+
+
+            <div class="form-group">
+                <input formControlName="email" type="email" class="form-control" email required
+                    [ngClass]="{'is-invalid': registerForm.get('email').errors && registerForm.get('email').touched}">
+                <label>email</label>
+                <span class="dotit"></span>
+                <div class="invalid-feedback"
+                    *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched">email is
+                    requierd</div>
+                <div class="invalid-feedback"
+                    *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').touched">has does
+                    not
+                    match
+                    email format</div>
+            </div>
+
+            <div class="form-group">
+                <input formControlName="password" type="password" class="form-control" required
+                    [ngClass]="{'is-invalid': registerForm.get('password').errors && registerForm.get('password').touched}">
+                <label>password</label>
+                <span class="dotit"></span>
+                <div class="invalid-feedback"
+                    *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched">
+                    password
+                    is requierd</div>
+                <div class="invalid-feedback"
+                    *ngIf="registerForm.get('password').hasError('minlength') && registerForm.get('password').touched">
+                    password
+                    must be at least '6' characters</div>
+                <div class="invalid-feedback"
+                    *ngIf="registerForm.get('password').hasError('maxlength') && registerForm.get('password').touched">
+                    password
+                    cannot exceed '10' characters</div>
+            </div>
+
+            <div class="form-group text-center">
+                <button type="button" [disabled]="!registerForm.valid">SIGN IN NOW <i
+                        class="fas fa-long-arrow-alt-right"></i></button>
+                <p class="forgot">Forgot Password? <span>Reset</span></p>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="js/javaScript.js"></script>
+</body>
+
+</html>
